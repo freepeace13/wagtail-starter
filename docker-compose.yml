@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  postgres:
+    container_name: lesbois-postgres
+    build: ./compose/postgres
+    environment:
+      - POSTGRES_USER=lesbois_user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=lesbois_site
+    ports:
+      - "5442:5432"
